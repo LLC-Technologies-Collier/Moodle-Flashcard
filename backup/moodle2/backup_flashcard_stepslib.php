@@ -32,7 +32,7 @@ class backup_flashcard_activity_structure_step extends backup_activity_structure
         $deckstate = new backup_nested_element('deckstate', array('id'), array(
                     'userid','deck','state'
                         ));
-        
+
         $flashcard->add_child($decks);
         $decks->add_child($deck);
 
@@ -45,7 +45,7 @@ class backup_flashcard_activity_structure_step extends backup_activity_structure
         // Sources
         $flashcard->set_source_table('flashcard', array('id' => backup::VAR_ACTIVITYID));
         $deck->set_source_table('flashcard_deckdata', array('flashcardid' => backup::VAR_PARENTID));
-        
+
         if ($this->get_setting_value('userinfo')) {
             $card->set_source_table('flashcard_card', array('flashcardid' => backup::VAR_PARENTID));
             $deckstate->set_source_table('flashcard_userdeck_state', array('flashcardid' => backup::VAR_PARENTID));

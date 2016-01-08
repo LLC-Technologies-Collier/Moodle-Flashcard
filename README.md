@@ -1,4 +1,4 @@
 moodle-mod_flashcard
 ====================
 
-A mpdule providing a memoizong helper activity using Leitner model
+A module providing a memorizong helper activity using Leitner model
